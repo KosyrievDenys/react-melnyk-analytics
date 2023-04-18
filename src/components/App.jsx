@@ -4,13 +4,15 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 // components
-import { ItemLevelsReportPage } from "./pages/ItemsLevelReport/ItemLevelsReportPage";
+import { ItemLevelReportPage } from "./pages/ItemLevelReportPage/ItemLevelReportPage";
+import { WaiterLevelReportPage } from "./pages/WaiterLevelReportPage/WaiterLevelReportPage";
 
 export const App = () => {
   return (
     <main>
       <Routes>
-        <Route path={'/'} element={<ItemLevelsReportPage />} />
+        <Route path={'item-level'} element={<ItemLevelReportPage />} />
+        <Route path={'waiter-level'} element={<WaiterLevelReportPage />} />
       </Routes>
     </main>
   );

@@ -1,4 +1,4 @@
-.itemLevelsReportPage {
+.itemLevelReportPage {
   width:       calc(100% - 220px);
   margin-left: 220px;
   * {
@@ -28,17 +28,25 @@
     align-items: center;
   }
   .table {
+    height:        85vh;
+    overflow:      scroll;
     border:        1px solid #D9D0F5;
     border-radius: 12px;
     margin-bottom: 16px;
     .header {
-      background: #F5F5F5;
+      max-width:    2453px;
+      width:        calc(100% - 263px);
+      background:   #F5F5F5;
+      position:     fixed;
+      margin-right: 20px;
       span {
         text-transform: uppercase;
         color:          #737373;
       }
     }
     .body {
+      overflow:   scroll;
+      margin-top: 44px;
       .row:nth-child(2n) {
         background: #FAFAFA;
       }
@@ -110,7 +118,7 @@
 }
 
 @media(max-width: 1440px) {
-  .itemLevelsReportPage {
+  .itemLevelReportPage {
     .row {
       .cell {
         p {
@@ -128,7 +136,7 @@
 }
 
 @media(max-width: 1024px) {
-  .itemLevelsReportPage {
+  .itemLevelReportPage {
     width:       100%;
     margin-left: 0;
     * {
@@ -141,7 +149,7 @@
 }
 
 @media(max-width: 768px) {
-  .itemLevelsReportPage {
+  .itemLevelReportPage {
     .icon {
       width:  13px;
       height: 13px;
@@ -161,7 +169,7 @@
 }
 
 @media(max-width: 567px) {
-  .itemLevelsReportPage {
+  .itemLevelReportPage {
     .row {
       .cell:nth-child(1) {
         width: 60%;
