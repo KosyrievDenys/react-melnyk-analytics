@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 //assets
 import styles from './HeaderLevels.module.scss';
 import search from '../../../assets/img/icons/search.svg'
-import arrowLeft from '../../../assets/img/icons/arrow-left.svg'
+import arrowLeft from '../../../assets/img/icons/arrow-left-white.svg'
 import settings from '../../../assets/img/icons/setting.svg'
 
 

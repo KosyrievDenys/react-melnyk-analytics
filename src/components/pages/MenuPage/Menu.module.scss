@@ -1,0 +1,133 @@
+.menu {
+  .todayDishes {
+    .dishe {
+      max-width:     31%;
+      padding:       16px;
+      position:      relative;
+      top:           0;
+      left:          0;
+      border:        1px solid #F8F5FF;
+      box-shadow:    0 1px 3px rgba(23, 23, 23, 0.1), 0 1px 2px -1px rgba(23, 23, 23, 0.1);
+      border-radius: 12px;
+      margin-bottom: 20px;
+      .back {
+        height:   110px;
+        width:    110px;
+        opacity:  .1;
+        position: absolute;
+        top:      0;
+        right:    0;
+      }
+      .true {
+        transform: scaleX(-1);
+      }
+      .selling {
+        display:       flex;
+        align-items:   center;
+        margin-bottom: 16px;
+        gap:           8px;
+        img {
+          height: 24px;
+          width:  24px;
+        }
+        h2 {
+          font-weight: 600;
+          font-size:   16px;
+          color:       #525252;
+        }
+      }
+      &Description {
+        display:        flex;
+        padding-bottom: 20px;
+        border-bottom:  1px solid #E5E5E5;
+        margin-bottom:  20px;
+        gap:            8px;
+        .dishePhoto {
+          height: 80px;
+          width:  80px;
+        }
+        .name {
+          margin-bottom: 8px;
+        }
+        .wrapper {
+          height:          100%;
+          display:         flex;
+          flex-direction:  column;
+          justify-content: space-between;
+          div {
+            display: flex;
+            gap:     10px;
+            img {
+              height: 16px;
+              width:  16px;
+            }
+            h3 {
+              font-size:   14px;
+              font-weight: 600;
+              color:       #404040;
+            }
+            p {
+              font-weight:  400;
+              font-size:    10px;
+              margin-right: 12px;
+            }
+            span {
+              font-size:   14px;
+              font-weight: 600;
+            }
+          }
+          .yeVeg {
+            p {
+              color: #37AE8B;
+            }
+            span {
+              color: #1D5D4A;
+            }
+          }
+          .nonVeg {
+            p {
+              color: #E95356;
+            }
+            span {
+              color: #9E1517;
+            }
+          }
+        }
+      }
+      .viewMore {
+        display:         flex;
+        align-items:     center;
+        justify-content: flex-end;
+        gap:             8px;
+        p {
+          text-transform: uppercase;
+          color:          #5534B2;
+          font-size:      14px;
+          font-weight:    600;
+          gap:            8px;
+          transition:     .2s linear;
+          cursor:         pointer;
+          &:hover {
+            opacity: .5;
+          }
+        }
+        img {
+          height: 20px;
+          width:  20px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1024px) {
+  .menu {
+    .todayDishes {
+      .dishe {
+        &Description {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
