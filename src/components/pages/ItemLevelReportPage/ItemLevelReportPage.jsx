@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //components
 import { HeaderLevels } from "../../common/HeaderLevels/HeaderLevels";
@@ -41,10 +41,18 @@ const dataTable = [
 
 const starts = [1, 2, 3, 4, 5];
 export const ItemLevelReportPage = () => {
+
+  const [menuSettings, setMenuSettings] = useState(false);
+
   return (
-    <section className={styles.itemLevelReportPage}>
+    <section
+      className={styles.itemLevelReportPage}
+      onClick={() => menuSettings && setMenuSettings(false)}
+    >
       <HeaderLevels
         title='Item Level Report'
+        menuSettings={menuSettings}
+        setMenuSettings={setMenuSettings}
       ></HeaderLevels>
       <div className='container'>
         <div className={styles.content}>

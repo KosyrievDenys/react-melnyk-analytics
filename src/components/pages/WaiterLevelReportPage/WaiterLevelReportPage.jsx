@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //components
 import { HeaderLevels } from "../../common/HeaderLevels/HeaderLevels";
@@ -74,10 +74,18 @@ const dataWaiters = [
 
 const starts = [1, 2, 3, 4, 5];
 export const WaiterLevelReportPage = () => {
+
+  const [menuSettings, setMenuSettings] = useState(false);
+
   return (
-    <section className={styles.waiterLevelReportPage}>
+    <section
+      className={styles.waiterLevelReportPage}
+      onClick={() => menuSettings && setMenuSettings(false)}
+    >
       <HeaderLevels
         title='Waiter Level Report'
+        menuSettings={menuSettings}
+        setMenuSettings={setMenuSettings}
       ></HeaderLevels>
       <div className='container'>
         <div className={styles.content}>

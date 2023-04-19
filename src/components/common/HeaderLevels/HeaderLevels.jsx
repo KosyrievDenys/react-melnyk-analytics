@@ -9,7 +9,8 @@ import search from '../../../assets/img/icons/search.svg'
 import arrowLeft from '../../../assets/img/icons/arrow-left.svg'
 import settings from '../../../assets/img/icons/setting.svg'
 
-export const HeaderLevels = ({ title }) => {
+
+export const HeaderLevels = ({ title, menuSettings, setMenuSettings }) => {
   return (
     <header className={styles.headerLevels}>
       <div className='container'>
@@ -29,7 +30,16 @@ export const HeaderLevels = ({ title }) => {
             </label>
           </div>
           <div className={styles.right}>
-            <img src={settings} alt='' className={styles.icon} />
+            <div onClick={() => setMenuSettings(!menuSettings)}>
+              <img src={settings} alt='' className={styles.icon} />
+              {menuSettings && <ul>
+                <li>By Date</li>
+                <li>Tip Amount - High to Low</li>
+                <li>Tip Amount - Low to High</li>
+                <li>No. of Tips - High to Low</li>
+                <li>No. of Tips - Low to High</li>
+              </ul>}
+            </div>
           </div>
         </div>
       </div>

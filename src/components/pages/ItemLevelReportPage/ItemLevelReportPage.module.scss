@@ -151,7 +151,7 @@
       padding: 14px 14px 14px 14px;
     }
     .table {
-      height: 66vh;
+      height: 70vh;
       .header {
         width: 95%;
       }
@@ -175,6 +175,9 @@
       .cell:nth-child(5) {
         display: none;
       }
+    }
+    .table{
+      height: 60vh;
     }
   }
 }
