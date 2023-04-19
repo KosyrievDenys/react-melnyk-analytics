@@ -38,11 +38,10 @@
     border-radius: 12px;
     margin-bottom: 16px;
     .header {
-      max-width:    2453px;
-      width:        calc(100% - 263px);
-      background:   #F5F5F5;
-      position:     fixed;
-      margin-right: 20px;
+      max-width:  2453px;
+      width:      calc(100% - 254px);
+      background: #F5F5F5;
+      position:   fixed;
       span {
         text-transform: uppercase;
         color:          #737373;
@@ -50,7 +49,6 @@
       }
     }
     .body {
-      overflow:   scroll;
       margin-top: 44px;
       .row:nth-child(2n) {
         background: #FAFAFA;
@@ -153,7 +151,7 @@
     .table {
       height: 70vh;
       .header {
-        width: 95%;
+        width: calc(100% - 32px);
       }
     }
   }
@@ -176,7 +174,7 @@
         display: none;
       }
     }
-    .table{
+    .table {
       height: 60vh;
     }
   }
