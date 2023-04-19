@@ -47,56 +47,58 @@ export const ItemLevelReportPage = () => {
         title='Item Level Report'
       ></HeaderLevels>
       <div className='container'>
-        <div className={styles.table}>
-          <div className={styles.header}>
-            <div className={styles.row}>
-              <div className={styles.cell}><span>Item Name</span></div>
-              <div className={styles.cell}><span>Rating</span></div>
-              <div className={styles.cell}><span>Sale Count</span></div>
-              <div className={styles.cell}><span>Total Sales</span></div>
-              <div className={styles.cell}><span>Cancelled Sales</span></div>
+        <div className={styles.content}>
+          <div className={styles.table}>
+            <div className={styles.header}>
+              <div className={styles.row}>
+                <div className={styles.cell}><span>Item Name</span></div>
+                <div className={styles.cell}><span>Rating</span></div>
+                <div className={styles.cell}><span>Sale Count</span></div>
+                <div className={styles.cell}><span>Total Sales</span></div>
+                <div className={styles.cell}><span>Cancelled Sales</span></div>
+              </div>
+            </div>
+            <div className={styles.body}>
+              {dataTable.map((item, index) => (
+                <div
+                  className={styles.row}
+                  key={index}
+                >
+                  <div className={styles.cell}>
+                    <img className={styles.icon} src={itemTable} alt='' />
+                    <p>{item.name.slice(0, 40) + '...'}</p>
+                  </div>
+                  <div className={styles.cell}>
+                    {starts.slice(0, item.rating).map(() => <img className={styles.icon} src={starOrange} />)}
+                    {starts.slice(item.rating, 5).map(() => <img className={styles.icon} src={star} />)}
+                    <p>{item.rating}/5</p>
+                  </div>
+                  <div className={styles.cell}>
+                    <p>{item.sale}%</p>
+                  </div>
+                  <div className={styles.cell}>
+                    <p>₹ {item.totalSales}</p>
+                  </div>
+                  <div className={styles.cell}>
+                    <p>₹ {item.cancelledSales}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          <div className={styles.body}>
-            {dataTable.map((item, index) => (
-              <div
-                className={styles.row}
-                key={index}
-              >
-                <div className={styles.cell}>
-                  <img className={styles.icon} src={itemTable} alt='' />
-                  <p>{item.name.slice(0, 40) + '...'}</p>
-                </div>
-                <div className={styles.cell}>
-                  {starts.slice(0, item.rating).map(() => <img className={styles.icon} src={starOrange} />)}
-                  {starts.slice(item.rating, 5).map(() => <img className={styles.icon} src={star} />)}
-                  <p>{item.rating}/5</p>
-                </div>
-                <div className={styles.cell}>
-                  <p>{item.sale}%</p>
-                </div>
-                <div className={styles.cell}>
-                  <p>₹ {item.totalSales}</p>
-                </div>
-                <div className={styles.cell}>
-                  <p>₹ {item.cancelledSales}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className={styles.results}>
-          <div className={styles.left}>
-            Show
-            <select name='' id=''>
-              <option value='10'>10</option>
-            </select>
-            <p>Results<span>5</span><span>/s</span></p>
-          </div>
-          <div className={styles.right}>
-            <img className={styles.icon} src={arrowCircleLeft} alt='' />
-            1
-            <img className={styles.icon} src={arrowCircleRight} alt='' />
+          <div className={styles.results}>
+            <div className={styles.left}>
+              Show
+              <select name='' id=''>
+                <option value='10'>10</option>
+              </select>
+              <p>Results<span>5</span><span>/s</span></p>
+            </div>
+            <div className={styles.right}>
+              <img className={styles.icon} src={arrowCircleLeft} alt='' />
+              1
+              <img className={styles.icon} src={arrowCircleRight} alt='' />
+            </div>
           </div>
         </div>
       </div>

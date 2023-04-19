@@ -1,6 +1,8 @@
 .itemLevelReportPage {
-  width:       calc(100% - 220px);
-  margin-left: 220px;
+  height:           100vh;
+  width:            calc(100% - 220px);
+  margin-left:      220px;
+  background-color: #fdf7f9;
   * {
     font-size:   14px;
     font-weight: 600;
@@ -9,12 +11,17 @@
     height: 16px;
     width:  16px;
   }
+  .content {
+    overflow: hidden;
+  }
   .row {
     display:     flex;
     align-items: center;
     padding:     14px 14px 14px 24px;
     .cell {
       padding-right: 5px;
+      display:       flex;
+      align-items:   center;
     }
     .cell:nth-child(1) {
       width: 40%;
@@ -22,10 +29,6 @@
     .cell:nth-child(2), .cell:nth-child(3), .cell:nth-child(4), .cell:nth-child(5) {
       width: 15%;
     }
-  }
-  .cell {
-    display:     flex;
-    align-items: center;
   }
   .table {
     height:        85vh;
@@ -42,6 +45,7 @@
       span {
         text-transform: uppercase;
         color:          #737373;
+        white-space:    nowrap;
       }
     }
     .body {
@@ -145,6 +149,11 @@
     .row {
       padding: 14px 14px 14px 14px;
     }
+    .table {
+      .header {
+        width: 95%;
+      }
+    }
   }
 }
 
@@ -181,5 +190,6 @@
         display: none;
       }
     }
+
   }
 }
