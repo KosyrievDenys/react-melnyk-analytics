@@ -1,6 +1,6 @@
 .headerLevels {
-  padding:          10px 0 20px;
-  right:            0;
+  padding: 10px 0 20px;
+  right:   0;
   .content {
     display:         flex;
     justify-content: space-between;
@@ -57,6 +57,33 @@
   .right {
     img {
       margin-top: 14px;
+    }
+  }
+}
+
+@media(max-width: 1024px) {
+  .headerLevels {
+    padding: 5px 0 10px;
+    .icon {
+      height: 16px;
+      width:  16px;
+    }
+    .left {
+      .backAndTitle {
+        align-items: center;
+      }
+      .btnBack {
+        height:  22px;
+        padding: 2px 6px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      label {
+        input {
+          padding: 8px 16px 8px 48px;
+        }
+      }
     }
   }
 }

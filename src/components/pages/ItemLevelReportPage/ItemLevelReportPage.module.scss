@@ -3,6 +3,7 @@
   width:            calc(100% - 220px);
   margin-left:      220px;
   background-color: #fdf7f9;
+  position:         fixed;
   * {
     font-size:   14px;
     font-weight: 600;
@@ -31,7 +32,7 @@
     }
   }
   .table {
-    height:        85vh;
+    height:        80vh;
     overflow:      scroll;
     border:        1px solid #D9D0F5;
     border-radius: 12px;
@@ -150,6 +151,7 @@
       padding: 14px 14px 14px 14px;
     }
     .table {
+      height: 66vh;
       .header {
         width: 95%;
       }
