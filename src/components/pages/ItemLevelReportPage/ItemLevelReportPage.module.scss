@@ -32,7 +32,7 @@
       }
     }
     .cell:nth-child(1) {
-      width: 40%;
+      width: 38%;
     }
     .cell:nth-child(2), .cell:nth-child(3), .cell:nth-child(4), .cell:nth-child(5) {
       width: 15%;
@@ -53,6 +53,9 @@
       }
     }
     .body {
+      .row:nth-child(1n) {
+        background: #fff;
+      }
       .row:nth-child(2n) {
         background: #FAFAFA;
       }
@@ -148,7 +151,8 @@
       padding: 14px 14px 14px 14px;
     }
     .table {
-      min-width: 1024px;
+      min-width: 766px;
+      cursor:    pointer;
     }
   }
 }

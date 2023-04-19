@@ -11,7 +11,7 @@ export const App = () => {
   return (
     <main>
       <Routes>
-        <Route path={'item-level'} element={<ItemLevelReportPage />} />
+        <Route path={'/'} element={<ItemLevelReportPage />} />
         <Route path={'waiter-level'} element={<WaiterLevelReportPage />} />
       </Routes>
     </main>
