@@ -100,39 +100,53 @@ export const WaiterLevelReportPage = () => {
                   </div>
                 </div>
                 <div className={styles.rating}>
-                  {starts.slice(0, waiter.rating).map(() => <img className={styles.icon} src={starOrange} />)}
-                  {starts.slice(waiter.rating, 5).map(() => <img className={styles.icon} src={star} />)}
+                  {starts.slice(0, waiter.rating).map(() => <img className={styles.icon} src={starOrange} alt="" />)}
+                  {starts.slice(waiter.rating, 5).map(() => <img className={styles.icon} src={star} alt="" />)}
                   <p>{waiter.rating}/5</p>
                 </div>
               </div>
               <div className={styles.data}>
-                <div>
-                  <p>{waiter.totalOrders}</p>
-                  <h3>Total Orders</h3>
+                <div className={styles.wrapper}>
+                  <div>
+                    <p>{waiter.totalOrders}</p>
+                    <h3>Total Orders</h3>
+                  </div>
                 </div>
-                <div>
-                  <p>₹{waiter.totalSales}</p>
-                  <h3>Total Sales</h3>
+                <div className={styles.wrapper}>
+                  <div>
+                    <p>₹{waiter.totalSales}</p>
+                    <h3>Total Sales</h3>
+                  </div>
                 </div>
-                <div>
-                  <p>₹{waiter.tips1}</p>
-                  <h3>Tips</h3>
+                <div className={styles.wrapper}>
+                  <div>
+                    <p>₹{waiter.tips1}</p>
+                    <h3>Tips</h3>
+                  </div>
                 </div>
-                <div>
-                  <p>₹{waiter.tips2}</p>
-                  <h3>Tips</h3>
+                <div className={styles.wrapper}>
+                  <div>
+                    <p>₹{waiter.tips2}</p>
+                    <h3>Tips</h3>
+                  </div>
                 </div>
-                <div>
-                  <p>₹{waiter.tips3}</p>
-                  <h3>Tips</h3>
+                <div className={styles.wrapper}>
+                  <div>
+                    <p>₹{waiter.tips3}</p>
+                    <h3>Tips</h3>
+                  </div>
                 </div>
-                <div>
-                  <p>₹{waiter.tips4}</p>
-                  <h3>Tips</h3>
+                <div className={styles.wrapper}>
+                  <div>
+                    <p>₹{waiter.tips4}</p>
+                    <h3>Tips</h3>
+                  </div>
                 </div>
-                <div>
-                  <p>₹{waiter.tips5}</p>
-                  <h3>Tips</h3>
+                <div className={styles.wrapper}>
+                  <div>
+                    <p>₹{waiter.tips5}</p>
+                    <h3>Tips</h3>
+                  </div>
                 </div>
               </div>
             </div>

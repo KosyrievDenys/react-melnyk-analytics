@@ -1,9 +1,9 @@
 .waiterLevelReportPage {
-  height:           100vh;
-  width:            calc(100% - 220px);
-  margin-left:      220px;
-  background-color: #fdf7f9;
-  overflow:         hidden;
+  height:      100vh;
+  width:       calc(100% - 220px);
+  margin-left: 220px;
+  background:  #FCFBFE;
+  overflow:    hidden;
   * {
     font-weight: 600;
     font-size:   14px;
@@ -43,12 +43,13 @@
         p:nth-child(2) {
           font-weight: 500;
           font-size:   12px;
+          color:       #737373;
         }
       }
     }
     .rating {
-      display:       flex;
-      margin-bottom: 12px;
+      display: flex;
+      margin:  12px 0;
       p {
         margin-left: 8px;
         color:       #737373;
@@ -60,18 +61,22 @@
     display:       flex;
     background:    #F8F5FF;
     border-radius: 8px;
-    div {
-      width:          14%;
-      display:        flex;
-      flex-direction: column;
-      align-items:    center;
-      padding:        16px 0;
-      &:not(&:last-child) {
-        border-right: 1px solid #E5E5E5;
-      }
-      h3 {
-        font-size:   10px;
-        font-weight: 400;
+    .wrapper {
+      width:  15%;
+      margin: 11px 0;
+      div {
+        display:        flex;
+        flex-direction: column;
+        align-items:    center;
+        padding:        10px 0;
+        &:not(&:last-child) {
+          border-right: 1px solid #E5E5E5;
+        }
+        h3 {
+          font-size:   10px;
+          font-weight: 400;
+          color:       #737373;
+        }
       }
     }
   }
@@ -98,7 +103,7 @@
   .waiterLevelReportPage {
     .data {
       flex-wrap: wrap;
-      div {
+      .wrapper {
         padding: 10px 0;
         &:nth-child(1), &:nth-child(2), &:nth-child(3) {
           width: 33%;
@@ -114,7 +119,7 @@
 @media(max-width: 567px) {
   .waiterLevelReportPage {
     .data {
-      div {
+      .wrapper {
         flex-wrap: wrap;
         &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
           width: 50%;

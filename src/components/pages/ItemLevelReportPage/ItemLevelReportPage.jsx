@@ -74,11 +74,11 @@ export const ItemLevelReportPage = () => {
                 >
                   <div className={styles.cell}>
                     <img className={styles.icon} src={itemTable} alt='' />
-                    <p>{item.name.slice(0, 40) + '...'}</p>
+                    <p>{item.name}</p>
                   </div>
                   <div className={styles.cell}>
-                    {starts.slice(0, item.rating).map(() => <img className={styles.icon} src={starOrange} />)}
-                    {starts.slice(item.rating, 5).map(() => <img className={styles.icon} src={star} />)}
+                    {starts.slice(0, item.rating).map(() => <img className={styles.icon} src={starOrange} alt='' />)}
+                    {starts.slice(item.rating, 5).map(() => <img className={styles.icon} src={star} alt='' />)}
                     <p>{item.rating}/5</p>
                   </div>
                   <div className={styles.cell}>
@@ -94,19 +94,19 @@ export const ItemLevelReportPage = () => {
               ))}
             </div>
           </div>
-          <div className={styles.results}>
-            <div className={styles.left}>
-              Show
-              <select name='' id=''>
-                <option value='10'>10</option>
-              </select>
-              <p>Results<span>5</span><span>/s</span></p>
-            </div>
-            <div className={styles.right}>
-              <img className={styles.icon} src={arrowCircleLeft} alt='' />
-              1
-              <img className={styles.icon} src={arrowCircleRight} alt='' />
-            </div>
+        </div>
+        <div className={styles.results}>
+          <div className={styles.left}>
+            Show
+            <select name='' id=''>
+              <option value='10'>10</option>
+            </select>
+            <p>Results<span>5</span><span>/s</span></p>
+          </div>
+          <div className={styles.right}>
+            <img className={styles.icon} src={arrowCircleLeft} alt='' />
+            1
+            <img className={styles.icon} src={arrowCircleRight} alt='' />
           </div>
         </div>
       </div>

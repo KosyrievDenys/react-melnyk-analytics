@@ -1,9 +1,9 @@
 .itemLevelReportPage {
-  height:           100vh;
-  width:            calc(100% - 220px);
-  margin-left:      220px;
-  background-color: #fdf7f9;
-  position:         fixed;
+  height:      100vh;
+  width:       calc(100% - 220px);
+  margin-left: 220px;
+  background:  #FCFBFE;
+  position:    fixed;
   * {
     font-size:   14px;
     font-weight: 600;
@@ -13,16 +13,23 @@
     width:  16px;
   }
   .content {
-    overflow: hidden;
+    overflow:      auto;
+    border:        1px solid #D9D0F5;
+    border-radius: 12px;
+    margin-bottom: 16px;
   }
   .row {
     display:     flex;
     align-items: center;
-    padding:     14px 14px 14px 24px;
+    padding:     17px 14px 17px 24px;
     .cell {
       padding-right: 5px;
       display:       flex;
       align-items:   center;
+      white-space:   nowrap;
+      &:nth-child(2) {
+        padding-left: 10px;
+      }
     }
     .cell:nth-child(1) {
       width: 40%;
@@ -32,16 +39,13 @@
     }
   }
   .table {
-    height:        80vh;
-    overflow:      scroll;
-    border:        1px solid #D9D0F5;
-    border-radius: 12px;
-    margin-bottom: 16px;
+    height:   80vh;
+    overflow: auto;
     .header {
-      max-width:  2453px;
-      width:      calc(100% - 254px);
       background: #F5F5F5;
-      position:   fixed;
+      position:   sticky;
+      top:        0;
+      left:       0;
       span {
         text-transform: uppercase;
         color:          #737373;
@@ -49,13 +53,13 @@
       }
     }
     .body {
-      margin-top: 44px;
       .row:nth-child(2n) {
         background: #FAFAFA;
       }
       .cell {
         color: #525252;
         &:nth-child(1) {
+          overflow: hidden;
           p {
             margin-left: 12px;
           }
@@ -73,6 +77,7 @@
   .results {
     display:         flex;
     justify-content: space-between;
+    margin-left:     8px;
     .left {
       display:     flex;
       align-items: center;
@@ -128,12 +133,6 @@
           margin-left: 25px;
         }
       }
-      .cell:nth-child(1) {
-        width: 32%;
-      }
-      .cell:nth-child(2), .cell:nth-child(3), .cell:nth-child(4), .cell:nth-child(5) {
-        width: 17%;
-      }
     }
   }
 }
@@ -149,10 +148,7 @@
       padding: 14px 14px 14px 14px;
     }
     .table {
-      height: 70vh;
-      .header {
-        width: calc(100% - 32px);
-      }
+      min-width: 1024px;
     }
   }
 }
@@ -163,36 +159,8 @@
       width:  13px;
       height: 13px;
     }
-    .row {
-      .cell:nth-child(1) {
-        width: 40%;
-      }
-      .cell:nth-child(2), .cell:nth-child(3), .cell:nth-child(4) {
-        width: 20%;
-      }
-      .cell:nth-child(5) {
-        display: none;
-      }
-    }
     .table {
       height: 60vh;
     }
-  }
-}
-
-@media(max-width: 567px) {
-  .itemLevelReportPage {
-    .row {
-      .cell:nth-child(1) {
-        width: 60%;
-      }
-      .cell:nth-child(2) {
-        width: 40%;
-      }
-      .cell:nth-child(3), .cell:nth-child(4) {
-        display: none;
-      }
-    }
-
   }
 }
