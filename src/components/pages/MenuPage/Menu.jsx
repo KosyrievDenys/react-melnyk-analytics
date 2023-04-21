@@ -2,6 +2,7 @@ import React from "react";
 
 //libs
 import cn from "classnames";
+import { NavLink } from "react-router-dom";
 
 //components
 import thumbsDown from '../../../assets/img/icons/thumbs-down.svg';
@@ -50,8 +51,10 @@ export const Menu = () => {
               </div>
             </div>
             <div className={styles.viewMore}>
-              <p>View More</p>
-              <img src={arrowRightPurple} alt='' />
+              <NavLink to={'#'}>
+                View More
+                <img src={arrowRightPurple} alt='' />
+              </NavLink>
             </div>
           </div>
         ))}

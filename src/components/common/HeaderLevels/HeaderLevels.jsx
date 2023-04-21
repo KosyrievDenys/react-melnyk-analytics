@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //libs
 import { NavLink } from 'react-router-dom';
@@ -11,6 +11,9 @@ import settings from '../../../assets/img/icons/setting.svg'
 
 
 export const HeaderLevels = ({ title, menuSettings, setMenuSettings }) => {
+
+  const [activeSettings, setActiveSettings] = useState(false);
+
   return (
     <header className={styles.headerLevels}>
       <div className='container'>
@@ -19,8 +22,9 @@ export const HeaderLevels = ({ title, menuSettings, setMenuSettings }) => {
             <div className={styles.backAndTitle}>
               <NavLink
                 className={styles.btnBack}
+                to={'#'}
               >
-                <img src={arrowLeft} className={styles.icon} />
+                <img src={arrowLeft} className={styles.icon} alt='' />
               </NavLink>
               <h2>{title}</h2>
             </div>
@@ -30,14 +34,17 @@ export const HeaderLevels = ({ title, menuSettings, setMenuSettings }) => {
             </label>
           </div>
           <div className={styles.right}>
-            <div onClick={() => setMenuSettings(!menuSettings)}>
+            <div
+              onClick={() => setMenuSettings(!menuSettings)}
+              className={activeSettings && styles.activeSettings}
+            >
               <img src={settings} alt='' className={styles.icon} />
               {menuSettings && <ul>
-                <li>By Date</li>
-                <li>Tip Amount - High to Low</li>
-                <li>Tip Amount - Low to High</li>
-                <li>No. of Tips - High to Low</li>
-                <li>No. of Tips - Low to High</li>
+                <li onClick={() => setActiveSettings(true)}>By Date</li>
+                <li onClick={() => setActiveSettings(true)}>Tip Amount - High to Low</li>
+                <li onClick={() => setActiveSettings(true)}>Tip Amount - Low to High</li>
+                <li onClick={() => setActiveSettings(true)}>No. of Tips - High to Low</li>
+                <li onClick={() => setActiveSettings(true)}>No. of Tips - Low to High</li>
               </ul>}
             </div>
           </div>
